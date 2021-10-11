@@ -1,0 +1,9 @@
+.pokedexContainer {
+    background-image: url(../../images/pokedex-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navLink {
+    text-decoration: none;
+}
