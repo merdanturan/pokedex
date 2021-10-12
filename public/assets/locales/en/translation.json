@@ -1,0 +1,15 @@
+{
+    "welcome": "Welcome to your Pokédex",
+    "start": "Click pokéball to start",
+    "navbar_home": "Home",
+    "navbar_mypokemons": "My Pokémons",
+    "navber_catch": "Catch'em!",
+    "search_placeholder": "Search Pokémons",
+    "search_button": "Search",
+    "load_more": "Load More",
+    "stats": "Stats",
+    "language": "Language",
+    "previous": "Previous",
+    "next": "Next",
+    "sorry": "Sorry, This Page Is Unavailable."
+  }

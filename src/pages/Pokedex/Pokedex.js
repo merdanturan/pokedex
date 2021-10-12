@@ -1,18 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import './style.css'
-import Header from '../../components/Header/Header'
 import { useDispatch, useSelector } from "react-redux";
-import { GetPokemonList } from "../../store/actions/index";
+import { useTranslation } from "react-i18next";
 import { ListGroup } from 'react-bootstrap'
+import { Spinner, Container, Row, Col } from 'react-bootstrap';
 import { Link } from "react-router-dom";
-import { Spinner, Button, Container, Row, Col } from 'react-bootstrap';
+
+import { GetPokemonList } from "../../store/actions/index";
+import Header from '../../components/Header/Header'
+import ReactPaginate from "react-paginate";
 
 
 
-const Pokedex = (props) => {
+
+const Pokedex = () => {
   const dispatch = useDispatch();
   const pokemonList = useSelector(state => state.PokemonList);
-  const [load, setLoad] = useState(2)
+
+  ///Language Support
+  const { t } = useTranslation();
 
 
   ////First Get
@@ -22,16 +28,10 @@ const Pokedex = (props) => {
   ///////
 
 
-  ///Load More
-  const loadMore = () => {
-    setLoad(load + 1)
-    FetchData(load);
-  }
-
   const FetchData = (page = 1) => {
     dispatch(GetPokemonList(page))
   }
-  //////
+
 
 
   ////Loading
@@ -44,6 +44,7 @@ const Pokedex = (props) => {
     )
   }
   //////
+
 
   ///Error Message 
   if (pokemonList.errorMsg !== "") {
@@ -60,6 +61,7 @@ const Pokedex = (props) => {
         <Container>
           <Row>
             <Col lg={{ span: 8, offset: 2 }} md={{ span: 10, offset: 1 }} sm={{ span: 12, offset: 0 }}>
+
               <ListGroup>
                 {pokemonList.data.map((pokemon) =>
                   <Link to={`/pokemon/${pokemon.name}`} className="navLink">
@@ -71,9 +73,22 @@ const Pokedex = (props) => {
                   </Link>
                 )}
               </ListGroup>
+
               <div className="d-grid gap-2">
-              <Button onClick={loadMore} variant="outline-danger" size="lg">Load More</Button>
+
+                <ReactPaginate
+                  previousLabel={t('previous')}
+                  nextLabel={t('next')}
+                  pageCount={Math.ceil(pokemonList.count / 15)}
+                  pageRangeDisplayed={3}
+                  marginPagesDisplayed={2}
+                  onPageChange={(data) => FetchData(data.selected + 1)}
+                  containerClassName={"pagination"}
+                  pageClassName={"paginationList"}
+                />
+
               </div>
+
             </Col>
           </Row>
         </Container>

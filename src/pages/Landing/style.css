@@ -1,5 +1,5 @@
 .landingMain {
-    background-image: url(../../images/pikachu.gif);
+    background-image: url(../../images/squirtle-pikachu.gif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -29,6 +29,12 @@
     left: 44%;
     position: relative;
     display: flex;
+}
+
+@media (max-width: 576px) {
+    .pokeball { 
+      left: 33%;
+    }
 }
 
 .pokeball button {

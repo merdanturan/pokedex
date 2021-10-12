@@ -1,0 +1,14 @@
+{
+    "welcome": "Pokédex'inize Hoşgeldiniz",
+    "start": "Başlamak İçin Pokétopu'na Tıklayın",
+    "navbar_home": "Ana Sayfa",
+    "navbar_mypokemons": "Pokémonlarım",
+    "navber_catch": "Onları Yakala!",
+    "search_placeholder": "Pokémon Ara",
+    "search_button": "Ara",
+    "load_more": "Daha Fazla Yükle",
+    "stats": "İstatistikler",
+    "previous": "Önceki",
+    "next": "Sonraki",
+    "sorry": "Üzgünüz, Bu Sayfa Kullanılamıyor."
+  }

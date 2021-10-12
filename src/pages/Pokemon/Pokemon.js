@@ -2,16 +2,23 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { GetPokemon } from "../../store/actions/index";
 import { Container, Row, Col, Spinner, Table, Carousel } from 'react-bootstrap'
+import { useTranslation } from "react-i18next";
+
 import Header from '../../components/Header/Header';
 
 const Pokemon = (props) => {
     const pokemonName = props.match.params.pokemon;
     const dispatch = useDispatch();
     const pokemonState = useSelector(state => state.Pokemon);
-    console.log(pokemonState)
+
+    ///Language Support
+    const { t } = useTranslation();
+
+    ///Get pokemon details
     useEffect(() => {
         dispatch(GetPokemon(pokemonName))
     }, []);
+
 
     ////Loading
     if (pokemonState.loading) {
@@ -23,6 +30,7 @@ const Pokemon = (props) => {
         )
     }
     //////
+
 
     ///Error Message
     if (pokemonState.errorMsg !== "") {
@@ -51,28 +59,28 @@ const Pokemon = (props) => {
                             <Carousel variant="dark">
                                 <Carousel.Item>
                                     <img
-                                        className="d-block w-50"
-                                        src={pokeData?.sprites?.front_default}
+                                        className="d-block w-50 mx-auto"
+                                        src={pokeData?.sprites.front_default}
                                         alt="front default"
                                     />
                                 </Carousel.Item>
                                 <Carousel.Item>
                                     <img
-                                        className="d-block w-50"
+                                        className="d-block w-50 mx-auto"
                                         src={pokeData?.sprites.back_default}
                                         alt="back default"
                                     />
                                 </Carousel.Item>
                                 <Carousel.Item>
                                     <img
-                                        className="d-block w-50"
+                                        className="d-block w-50 mx-auto"
                                         src={pokeData?.sprites.front_shiny}
                                         alt="front shiny"
                                     />
                                 </Carousel.Item>
                                 <Carousel.Item>
                                     <img
-                                        className="d-block w-50"
+                                        className="d-block w-50 mx-auto"
                                         src={pokeData?.sprites.back_shiny}
                                         alt="back shiny"
                                     />
@@ -87,7 +95,7 @@ const Pokemon = (props) => {
                             <Table striped bordered hover>
                                 <thead>
                                     <tr>
-                                        <th>Stats</th>
+                                        <th>{t('stats')}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
