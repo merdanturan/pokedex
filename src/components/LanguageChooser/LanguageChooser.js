@@ -18,7 +18,7 @@ const GlobeIcon = ({ width = 24, height = 24 }) => (
         xmlns="http://www.w3.org/2000/svg"
         width={width}
         height={height}
-        fill="currentColor"
+        fill="#dc3545"
         className="bi bi-globe"
         viewBox="0 0 16 16"
     >
