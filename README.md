@@ -49,9 +49,9 @@ This command will run preview script for app.
 
 ```python
 1. NextJs
-2. CSS
-3. Redux
-4. Bootstrap
+2. Typescript
+3. Bootstrap
+4. Redux
 
 ```
 ## Live Project
