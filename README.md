@@ -55,16 +55,16 @@ This command will run preview script for app.
 
 ```
 ## Live Project
-```bash
 See Live:
+```bash
 https://pokedex-mturan.netlify.app
 ```
 ## For Questions
-```bash
 Linkedin Account:
+```bash
 https://www.linkedin.com/in/merdan-turan/
 ```
-```bash
 Gmail Account:
+```bash
 merdanturan@gmail.com
 ```
