@@ -9,7 +9,7 @@ import Pagination from '@/components/Pagination/Pagination';
 import { UnknownAction } from 'redux';
 import { withLoadingAndErrorHandling } from '@/hoc/withLoadingAndErrorHandling';
 
-const perPage = process.env.NEXT_PUBLIC_PER_PAGE ?? 1;
+const perPage = process.env.NEXT_PUBLIC_PER_PAGE ?? 10;
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -29,12 +29,13 @@ const Home = () => {
 
   // Data fetch
   useEffect(() => {
+    if(listData && listData.length) return
     dispatch(fetchListData() as unknown as UnknownAction);
 
     return () => {
       dispatch(resetListStates())
     }
-  }, [dispatch]);
+  }, [dispatch, listData]);
 
   // High order component to handle loading and errors
   const DetailPageWithLoadingAndErrorHandling = withLoadingAndErrorHandling(List);
