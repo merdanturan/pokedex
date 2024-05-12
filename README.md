@@ -60,11 +60,11 @@ See Live:
 https://pokedex-mturan.netlify.app
 ```
 ## For Questions
-Linkedin Account:
+Linkedin:
 ```bash
 https://www.linkedin.com/in/merdan-turan/
 ```
-Gmail Account:
+Gmail:
 ```bash
 merdanturan@gmail.com
 ```
