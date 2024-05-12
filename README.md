@@ -1,40 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Pokedex - Merdan Turan
 
-## Getting Started
+NextJs Pokedex app to list pokemons and show their details
 
-First, run the development server:
+### Install packages
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+To install workspace package in app, run the following command in the app directory, don't do it manually:
+
+```
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Local development
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Make sure that in your `.env.local` file you have 
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+1. `NEXT_PUBLIC_PER_PAGE=${NUMBER}`: items per page, 
+2. `NEXT_PUBLIC_REQUEST_ENDPOINT=${URL}`: the url to get pokemon data,
+3. `NEXT_PUBLIC_REQUEST_MAX_LIMIT=${NUMBER}`: count of pokemons that will be requested from api
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+NOTE: The code contains some default values ​​in case these variables are not given.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+To start local development, run the following command:
 
-## Learn More
+```
+npm run dev
+```
+This command will start create-next-app and you will be able to develop application.
 
-To learn more about Next.js, take a look at the following resources:
+## Build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To build app, run the following command:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+npm run build
+```
 
-## Deploy on Vercel
+## Preview
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To preview app, run the following command:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+npm run start
+```
+
+This command will run preview script for app.
+
+```
+
+## Choices
+```python
+1. NextJs
+2. CSS
+3. Redux
+4. Bootstrap
+
+```
+## Live Project
+```bash
+See Live:
+https://pokedex-mturan.netlify.app
+```
+## For Questions
+```bash
+Linkedin Account:
+https://www.linkedin.com/in/merdan-turan/
+```
+```bash
+Gmail Account:
+merdanturan@gmail.com
+```

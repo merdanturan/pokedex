@@ -1,0 +1,9 @@
+.responsive-flex {
+    flex-direction: row;
+}
+
+@media (max-width: 767.98px) { 
+    .responsive-flex {
+        flex-direction: column;
+    }
+ }
