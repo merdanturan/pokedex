@@ -45,9 +45,8 @@ npm run start
 
 This command will run preview script for app.
 
-```
-
 ## Choices
+
 ```python
 1. NextJs
 2. CSS
